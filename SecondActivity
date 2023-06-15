@@ -1,0 +1,37 @@
+package com.example.encyclopedia;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.os.Bundle;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class SecondActivity extends AppCompatActivity {
+
+    List<Flower> flowers = new ArrayList<Flower>();
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_second);
+
+        setInitialData();
+        RecyclerView recyclerView = findViewById(R.id.list_flowers);
+        FlowerAdapter adapter = new FlowerAdapter(this, flowers);
+        recyclerView.setAdapter(adapter);
+    }
+
+    private void setInitialData() {
+        flowers.add( new Flower("Астра", "Род травянистых растений семейства Астровые, или Сложноцветные (Asteraceae), включающий более двухсот видов[3], широко распространенных в культуре как декоративные растения с красивыми соцветиями-корзинками разнообразной окраски.", R.drawable.aster));
+        flowers.add( new Flower("Гвоздика", " Род многолетних растений семейства Гвоздичные (Caryophyllaceae).\n" +
+                "\n" +
+                "Травянистое дикорастущее и садовое растение с цветками разнообразной окраски. Многие виды и сорта гвоздики выращиваются на срезку и являются декоративными садовыми растениями. ", R.drawable.gvozdika));
+        flowers.add( new Flower("Тюльпан", "род многолетних травянистых луковичных растений семейства Лилейные (Liliaceae), в современных систематиках включающий более 80 видов. ", R.drawable.tulip));
+        flowers.add( new Flower("Роза", " собирательное название видов и сортов представителей рода Шипо́вник (лат. Rósa), выращиваемых человеком и растущих в дикой природе.", R.drawable.roses));
+        flowers.add( new Flower("Пион", "род травянистых многолетников и листопадных кустарников (древовидные пионы).", R.drawable.peony));
+
+
+    }
+}
