@@ -1,0 +1,33 @@
+package com.example.encyclopedia;
+
+public class Flower {
+    private String name;
+    private String flowerDescription;
+    private int flowerResource; // we will attach pictures from res/drawable
+
+    public Flower(String newName, String newFlowerDescription, int newFlowerResource) {
+        this.name = name;
+        this.flowerDescription= newFlowerDescription;
+        this.flowerResource = newFlowerResource;
+    }
+    public String getName(){
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getFlowerDescription(){
+        return flowerDescription;
+    }
+    public void setFlowerDescription(String flowerDescription){
+        this.flowerDescription =flowerDescription;
+    }
+    public int getFlowerResource(){
+        return flowerResource;
+    }
+
+    public void setFlowerResource(int flowerResource) {
+        this.flowerResource = flowerResource;
+    }
+
+}
